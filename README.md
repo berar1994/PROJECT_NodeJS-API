@@ -10,7 +10,8 @@ Simple REST API using Node.js with Mongo
 * create a folder on your local disk  
 * clone this repository into your folder  
 * open GitBash or CMD(Command Prompt) in folder and type 'npm install'  
-* start your mongo by typing in a new CMD the command 'mongod'  
+* start your mongo by typing in a new CMD the command 'mongod' (presuming MongoDB is present in PATH)  
+* if MongoDB is not present in PATH then follow next tutorial https://www.youtube.com/watch?v=6vTgWXPIPwU and try again  
 * run the create_db.bat file; this will create the db and insert 2 tasks  
 * run the api by typing in GitBash or CMD the command 'npm run start'  
 
