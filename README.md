@@ -21,3 +21,4 @@ localhost:3000/tasks    - GET all tasks
 localhost:3000/task/id  - GET task by mongodb id  
 localhost:3000/task     - POST save new task  
 localhost:3000/task/id  - POST delete a task by mongodb id  
+localhost:3000/task     - PUT update task by mongodb id  
