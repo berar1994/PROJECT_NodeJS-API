@@ -11,5 +11,8 @@ module.exports = function (app) {
     app.route('/task').post(taskController.addTask);
     app.route('/task/:id').post(taskController.deleteTask);
     
+    // PUT requests
+    app.route('/task').put(taskController.updateTask);
+    
 
 };

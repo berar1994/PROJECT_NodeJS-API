@@ -97,9 +97,7 @@ exports.deleteTask = function (req, res) {
     var id = req.params.id;
 
     if (isObjectIdValid(id)) {
-        Task.remove({
-            _id: id
-        }, function (err, task) {
+        Task.remove({_id: id}, function (err, task) {
             if (err) {
                 res.send(err);
             }
@@ -111,4 +109,22 @@ exports.deleteTask = function (req, res) {
     } else {
         res.sendStatus(404);
     }
+};
+
+
+
+exports.updateTask = function (req, res) {
+    var taskToUpdate = new Task(req.body);
+
+    if (isObjectIdValid(req.body._id)) {
+        Task.findOneAndUpdate({_id: req.body._id}, taskToUpdate, {new: true}, function (err, updated) {
+            if (err) {
+                res.send(err);
+            }
+            res.json(updated);
+        });
+    } else {
+        res.sendStatus(404);
+    }
+
 };
